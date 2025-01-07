@@ -20,15 +20,12 @@ const calculateWinner = (squares) => {
   });
   return result;
 };
-const Board = () => {
-  const [isNextX, setIsNextX] = useState(true);
-  const [squares, setSquares] = useState(Array(9).fill(null));
+const Board = ({ isNextX, squares, onPlay }) => {
   const handleCLick = (i) => {
     if (squares[i] || calculateWinner(squares)) return;
     const nextSquares = [...squares];
     nextSquares[i] = isNextX ? "X" : "O";
-    setSquares(nextSquares);
-    setIsNextX(!isNextX);
+    onPlay(nextSquares);
   };
   const winner = calculateWinner(squares);
   const result = winner ? `The Winner is ${winner}` : "go ahead";
