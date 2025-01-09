@@ -3,3 +3,9 @@
 -[chakra 이용해서 리엑트 프로젝트 만들어보기](https://www.chakra-ui.com/)
 
 -[렌더트리,트리로써 ui이해하기기](https://ko.react.dev/learn/understanding-your-ui-as-a-tree)
+
+-[중첩 객체 처리하는 라이브러리](https://github.com/immerjs/use-immer)
+
+-[실행 컨텍스트](https://inpa.tistory.com/entry/JS-%F0%9F%93%9A-%EC%8B%A4%ED%96%89-%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8)
+
+-[hookapi가 어떻게 작동하는지](https://medium.com/@ryardley/react-hooks-not-magic-just-arrays-cd4f1857236e)
