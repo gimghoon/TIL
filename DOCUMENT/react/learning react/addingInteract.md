@@ -6,10 +6,12 @@
 
 - 사용자는 state를 활용하여 값을 기억시키고 set함수를 통해 값을 변경시킨다
 - react는 세가지 단계를 거친다
+
   - trigger: -초기 렌더링에 의해
     - set함수호출(state업데이트)에 의해
-  - render: setState는 비동기나 이벤트 핸들러에 의해 호출되면 업데이트 요청이 updateQueue에 추가됩니다.
-    렌더링 사이클중 updateQUeue를 통해 비동기적으로 처리된다.vitual dom을 생성한다.
+    - 그외에도 상태 변경에 따라 컴포넌트의 재렌더링이 트리거될 수 있다
+  - render: setState는 비동기나 이벤트 핸들러에 의해 호출되면 상태업데이트는 비동기적으로 처리된되고 업데이트 요청이 updateQueue에 추가됩니다.
+    렌더링 사이클중 updateQUeue를 통해 .vitual dom을 생성한다.
 
     - 렌더링이 완료되면 이떄 batch처리 방식으로 한꺼번에 계산을 한다. batch에서는 setState함수호출을 묶어서 한번에 계산하고 업데이터 함수 (콜백함수)를 쓰지 않으면 이전의 상태를 참조하지 않아서 덮어씌우게 된다.
     - batch 가 완료되면 diffing을 통해 virtual dom과 real dom을 비교하여 state의 변경점을 찾는다.
