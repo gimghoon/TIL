@@ -15,3 +15,5 @@
   return n == 1 ? 1 : b;
   }
 ```
+
+-[async/await](https://ko.javascript.info/async-await)
